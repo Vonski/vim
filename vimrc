@@ -67,9 +67,10 @@ set spell spelllang=en_us,pl
 
 colorscheme codedark
 
-:set listchars=eol:↵,tab:<-,trail:·,space:·
+set listchars=eol:↵,tab:▸\ ,trail:·,space:·
+set ts=4 sts=4 sw=4 noexpandtab
 
 noremap <Space> <Nop>
 let mapleader=" "
 
-:nnoremap <leader>l :set list! <Enter>
+nnoremap <leader>l :set list! <Enter>
