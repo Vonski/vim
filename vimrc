@@ -9,6 +9,26 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Bundle 'takac/vim-hardtime'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -73,4 +93,12 @@ set ts=4 sts=4 sw=4 noexpandtab
 noremap <Space> <Nop>
 let mapleader=" "
 
-nnoremap <leader>l :set list! <Enter>
+nnoremap <leader>l :set list! <cr>
+nnoremap <leader>n :set number! <cr>
+nnoremap <leader>r :set relativenumber! <cr>
+nnoremap <leader>s :w<cr>
+
+let g:hardtime_default_on = 1
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:hardtime_maxcount = 3
+
