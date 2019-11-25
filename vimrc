@@ -102,3 +102,6 @@ let g:hardtime_default_on = 1
 let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 let g:hardtime_maxcount = 3
 
+set backupdir=~/.vim_cache//,/tmp//
+set directory=~/.vim_cache//,/tmp//
+set undodir=~/.vim_cache//,/tmp//
