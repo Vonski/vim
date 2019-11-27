@@ -105,3 +105,6 @@ let g:hardtime_maxcount = 3
 set backupdir=~/.vim_cache//,/tmp//
 set directory=~/.vim_cache//,/tmp//
 set undodir=~/.vim_cache//,/tmp//
+
+set number
+set relativenumber
